@@ -66,6 +66,7 @@ function LayoutComponent() {
               onClick: toggle,
             }
           )}
+          Data from NASA Open APIs
         </Header>
         <Content
           className="site-layout-background content-wrap"

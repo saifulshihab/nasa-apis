@@ -22,9 +22,11 @@ function LayoutComponent() {
   };
 
   return (
-    <Layout>
+    <Layout className="layout-wrap">
       <Sider trigger={null} collapsible collapsed={collapse}>
-        <div className="logo" />
+        <div className="logo">
+          <h3>NASA API</h3>
+        </div>
         <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
           <Menu.Item key="1" icon={<RiseOutlined />}>
             <NavLink to="/apod">APOD</NavLink>
@@ -56,7 +58,7 @@ function LayoutComponent() {
         </Menu>
       </Sider>
       <Layout className="site-layout">
-        <Header className="site-layout-background" style={{ padding: 0 }}>
+        <Header className="site-layout-background " style={{ padding: 0 }}>
           {React.createElement(
             collapse ? MenuUnfoldOutlined : MenuFoldOutlined,
             {
@@ -66,7 +68,7 @@ function LayoutComponent() {
           )}
         </Header>
         <Content
-          className="site-layout-background"
+          className="site-layout-background content-wrap"
           style={{
             margin: '24px 16px',
             padding: 24,

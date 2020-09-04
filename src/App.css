@@ -1,4 +1,11 @@
-#components-layout-demo-custom-trigger .trigger {
+.layout-wrap {
+  height: 100vh;
+}
+.content-wrap {
+  height: 100%;
+  overflow-y: scroll;
+}
+.trigger {
   font-size: 18px;
   line-height: 64px;
   padding: 0 24px;
@@ -6,16 +13,28 @@
   transition: color 0.3s;
 }
 
-#components-layout-demo-custom-trigger .trigger:hover {
+.trigger:hover {
   color: #1890ff;
 }
 
-#components-layout-demo-custom-trigger .logo {
+.logo {
   height: 32px;
   background: rgba(255, 255, 255, 0.2);
   margin: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo h3 {
+  color: #fff;
+  margin-bottom: 0;
 }
 
 .site-layout .site-layout-background {
   background: #fff;
+}
+.apod {
+  margin-top: 15px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.45);
 }

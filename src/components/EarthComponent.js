@@ -3,7 +3,7 @@ import React from 'react';
 function EarthComponent() {
   return (
     <>
-      <h1>EarthComponent</h1>
+      <h1>Earth (Coming Soon)</h1>
     </>
   );
 }

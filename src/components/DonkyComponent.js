@@ -3,7 +3,7 @@ import React from 'react';
 function DonkyComponent() {
   return (
     <>
-      <h1>DonkyComponent</h1>
+      <h1>Donky (Coming Soon)</h1>
     </>
   );
 }

@@ -25,7 +25,7 @@ function LayoutComponent() {
     <Layout className="layout-wrap">
       <Sider trigger={null} collapsible collapsed={collapse}>
         <div className="logo">
-          <h3>NASA API</h3>
+          <h3>NASA DATA</h3>
         </div>
         <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
           <Menu.Item key="1" icon={<RiseOutlined />}>

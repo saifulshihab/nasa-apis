@@ -3,7 +3,7 @@ import React from 'react';
 function MarsComponent() {
   return (
     <>
-      <h1>MarsComponent</h1>
+      <h1>Mars (Coming Soon)</h1>
     </>
   );
 }

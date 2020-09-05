@@ -38,3 +38,11 @@
   text-align: center;
   color: rgba(0, 0, 0, 0.45);
 }
+.card-data {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.card-data:hover {
+  opacity: 1;
+}

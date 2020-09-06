@@ -27,8 +27,8 @@ function ApodComponent() {
           alert(`Error ${error.response.status} : ${statusText}.`);
         }
       });
-  }, []);
-  
+  }, [hd]);
+
   return (
     <>
       <Row>
@@ -55,7 +55,12 @@ function ApodComponent() {
                 <Col span={24}>
                   <Card
                     style={{ width: '100%' }}
-                    cover={<img alt={apoddata.title} src={apoddata.url} />}
+                    cover={
+                      <img
+                        alt={apoddata.title}
+                        src={hd ? apoddata.hdurl : apoddata.url}
+                      />
+                    }
                   >
                     <Meta
                       avatar={<Avatar src={apoddata.url} />}

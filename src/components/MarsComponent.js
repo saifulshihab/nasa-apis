@@ -19,7 +19,7 @@ function MarsComponent() {
       )
       .then((response) => {
         setTimeout(() => {
-          setData(response.data.photos);      
+          setData(response.data.photos);
           setLoad(false);
         }, 0);
       })
@@ -44,7 +44,7 @@ function MarsComponent() {
       content: (
         <>
           <Divider />
-          <div className="modal_data_wrapper">
+          <div className='modal_data_wrapper'>
             <div style={{ width: '100%' }}>
               <img src={d.img_src} alt={d.rover.name} />
               <br />
@@ -81,7 +81,7 @@ function MarsComponent() {
     setLoad(true);
     setRover(value.toLowerCase());
   }
-  function paginationHandler(value) {   
+  function paginationHandler(value) {
     setPage(value);
   }
   return (
@@ -113,28 +113,29 @@ function MarsComponent() {
             <Select
               showSearch
               style={{ width: '100%' }}
-              placeholder="Select Rover"
-              optionFilterProp="children"
+              placeholder='Select Rover'
+              optionFilterProp='children'
               onChange={onChange}
               filterOption={(input, option) =>
                 option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
               }
             >
-              <Option value="Curiosity">Curiosity</Option>
-              <Option value="Opportunity">Opportunity</Option>
-              <Option value="Spirit">Spirit</Option>
+              <Option value='Curiosity'>Curiosity</Option>
+              <Option value='Opportunity'>Opportunity</Option>
+              <Option value='Spirit'>Spirit</Option>
+              <Option value='Perseverance'>Perseverance</Option>
             </Select>
           </div>
         </Col>
       </Row>
       <Row>
         {loading ? (
-          <Spin size="large" style={{ marginTop: 20 }} />
+          <Spin size='large' style={{ marginTop: 20 }} />
         ) : (
           <>
             {data.map((d) => (
               <Col
-                className="card-data"
+                className='card-data'
                 key={d.id}
                 span={6}
                 style={{ padding: '5px' }}

@@ -12,7 +12,7 @@ function ApodComponent() {
   useEffect(() => {
     axios
       .get(
-        'https://api.nasa.gov/planetary/apod?hd=true&api_key=pEW4MIDbAxO2MRBT7XxgobiHRczr4xSDQIrg2Ak9'
+        `https://api.nasa.gov/planetary/apod?hd=${hd}&api_key=pEW4MIDbAxO2MRBT7XxgobiHRczr4xSDQIrg2Ak9`
       )
       .then((response) => {
         setApodData(response.data);
@@ -34,7 +34,7 @@ function ApodComponent() {
       <Row>
         <Col span={24}>
           {loader ? (
-            <Spin size="large" />
+            <Spin size='large' />
           ) : (
             <>
               <Row>
@@ -44,7 +44,7 @@ function ApodComponent() {
                     Each day a different image or photograph of our fascinating
                     universe is featured, along with a brief explanation written
                     by a professional astronomer.{' '}
-                    <a href="https://apod.nasa.gov/apod/archivepix.html">
+                    <a href='https://apod.nasa.gov/apod/archivepix.html'>
                       Discover the cosmos!
                     </a>
                   </p>
@@ -67,10 +67,16 @@ function ApodComponent() {
                       title={apoddata.title}
                       description={apoddata.explanation}
                     />
-                    <div className="apod">
+                    <div className='apod'>
                       <p>Date: {apoddata.date}</p>
                       <p>Copyright: {apoddata.copyright}</p>
-                      HD Image <Switch onChange={() => setHD(!hd)} />
+                      HD Image{' '}
+                      <Switch
+                        onChange={() => {
+                          console.log('changed');
+                          setHD(!hd);
+                        }}
+                      />
                     </div>
                   </Card>
                 </Col>
